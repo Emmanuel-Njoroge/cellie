@@ -1,0 +1,14 @@
+/* ===== Leaderboards ===== */
+.board{border:2px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+.brow{display:grid;grid-template-columns:44px 40px 1fr auto;align-items:center;gap:10px;padding:10px 14px;border-top:2px solid var(--line)}
+.brow:first-child{border-top:0}
+.brow.me{background:var(--accent-bg)}
+.brow .rk{font-size:20px;font-weight:900;text-align:center;color:var(--sub)}
+.brow .av{font-size:26px;text-align:center}
+.brow .nm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brow .nm small{display:block;color:var(--sub);font-size:12px;font-weight:700}
+.brow .val{font-weight:900;font-size:18px;text-align:right}
+.empty{padding:26px 16px;text-align:center;color:var(--sub);font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.chips button{border:2px solid var(--line);border-bottom-width:4px;border-radius:99px;background:var(--card);padding:6px 14px;font-size:14px;font-weight:800;color:var(--sub)}
+.chips button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-bg);color:var(--accent-tx)}

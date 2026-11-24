@@ -1,0 +1,23 @@
+/* ===== Learn path ===== */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:2px solid var(--line)}
+.stat-pill{display:flex;align-items:center;gap:6px;font-size:18px;font-weight:900}
+.goal{flex:1;min-width:0}
+.goal small{display:block;font-size:12px;color:var(--sub);margin-top:3px}
+.gbar{height:12px;background:var(--line);border-radius:99px;overflow:hidden}
+.gbar i{display:block;height:100%;background:var(--gold);border-radius:99px;transition:width .5s}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--accent-bg);display:grid;place-items:center;font-size:24px;border:2px solid var(--line)}
+.lvbar{margin:14px 0 0}
+.unit{margin:22px 0 10px;border-radius:18px;padding:14px 18px;color:#fff;background:var(--uc);border-bottom:5px solid var(--ud)}
+.unit h2{font-size:21px;font-weight:900}
+.unit p{font-size:14px;margin-top:2px}
+.path{display:flex;flex-direction:column;align-items:center;gap:14px;padding:18px 0 8px}
+.nodewrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;width:150px}
+.node{width:76px;height:72px;border:0;border-radius:50%;background:var(--uc);box-shadow:0 7px 0 var(--ud);font-size:32px;display:grid;place-items:center;color:#fff;transition:transform .08s,box-shadow .08s}
+.node:active{transform:translateY(5px);box-shadow:0 2px 0 var(--ud)}
+.node.done{background:var(--gold);box-shadow:0 7px 0 var(--gold-d)}
+.node.locked{background:var(--lock);box-shadow:0 7px 0 var(--lock-d)}
+.node.locked span{opacity:.55}
+.nlabel{font-size:13px;color:var(--sub);text-align:center;line-height:1.2;margin-top:4px}
+.start{position:absolute;top:-30px;background:var(--card);color:var(--uc);border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;padding:3px 12px;font-weight:900;font-size:14px;letter-spacing:.8px;animation:bob 1.4s ease-in-out infinite}
+.start::after{content:"";position:absolute;left:50%;bottom:-9px;width:12px;height:12px;background:var(--card);border-right:2px solid var(--line);border-bottom:2px solid var(--line);transform:translateX(-50%) rotate(45deg)}
+@keyframes bob{50%{transform:translateY(-6px)}}

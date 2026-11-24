@@ -1,0 +1,9 @@
+/* ===== Buttons ===== */
+.btn{border:0;border-radius:var(--r-md);padding:14px 22px;background:var(--accent);color:var(--on-accent);font-weight:900;font-size:16px;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 var(--lift) 0 var(--accent-d);transition:transform .06s,box-shadow .06s}
+.btn:active:not([disabled]){transform:translateY(var(--lift));box-shadow:none}
+.btn[disabled]{background:var(--lock);color:var(--lock-tx);box-shadow:0 var(--lift) 0 var(--lock-d);cursor:default}
+.btn.bad{background:var(--bad);color:#fff;box-shadow:0 var(--lift) 0 var(--bad-d)}
+.btn.ghost{background:var(--card);color:var(--accent-tx);border:2px solid var(--line);box-shadow:0 var(--lift) 0 var(--line)}
+.btn.sm{padding:8px 14px;font-size:13px}
+.btn.wide{width:100%}
+.iconbtn{border:2px solid var(--line);border-bottom-width:4px;background:var(--card);border-radius:12px;font-size:20px;padding:6px 10px;line-height:1}

@@ -1,0 +1,28 @@
+/* ===== Textbook reader & video player ===== */
+.book{background:var(--card);border:2px solid var(--line);border-top:10px solid var(--uc);border-radius:22px;padding:20px;box-shadow:0 6px 0 var(--line)}
+.book .eyebrow{font-size:13px;font-weight:900;color:var(--uc);letter-spacing:.8px;text-transform:uppercase}
+.book h2{font-size:28px;font-weight:900;margin:4px 0 12px}
+.book p{font-size:19px;line-height:1.65}
+.vocab{display:grid;gap:10px;margin-top:10px}
+.vcard{border:2px solid var(--line);border-left:8px solid var(--uc);border-radius:14px;padding:10px 14px}
+.vcard b{font-size:18px;color:var(--uc)}
+.vcard span{display:block;font-size:15px;color:var(--text);margin-top:2px}
+.dots{display:flex;gap:6px;justify-content:center;margin:14px 0 0}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.dots i.on{background:var(--uc);transform:scale(1.25)}
+.stage{border-radius:26px;padding:16px;background:linear-gradient(135deg,var(--uc),color-mix(in srgb,var(--uc) 50%,#1a1245));color:#fff;position:relative;overflow:hidden;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;box-shadow:0 7px 0 var(--ud),0 18px 30px color-mix(in srgb,var(--uc) 35%,transparent)}
+.stage .vis{background:var(--card);color:var(--text);animation:pop .5s both}
+.stage .bigemo{font-size:128px;text-align:center;line-height:1.1;animation:pop .5s both;margin:18px 0}
+.stage .floaty{position:absolute;top:12px;right:16px;font-size:42px;animation:bob 2.2s ease-in-out infinite}
+.stage .cap{font-size:22px;line-height:1.4;text-align:center;background:rgba(0,0,0,.38);border-radius:16px;padding:12px 14px;font-weight:800}
+.stage .tag{font-size:12px;font-weight:900;letter-spacing:.8px;opacity:.9}
+@keyframes pop{from{transform:scale(.82);opacity:0}to{transform:none;opacity:1}}
+.vprog{display:flex;gap:6px;margin-top:2px}
+.vprog i{flex:1;height:8px;border-radius:99px;background:rgba(255,255,255,.3);overflow:hidden;position:relative}
+.vprog i b{position:absolute;inset:0;background:#fff;transform-origin:left;transform:scaleX(0)}
+.vprog i.done b{transform:scaleX(1)}
+.vprog i.now b{animation:fill var(--d) linear forwards}
+.vprog.paused i.now b{animation-play-state:paused}
+@keyframes fill{to{transform:scaleX(1)}}
+.vctl{display:flex;justify-content:center;gap:12px;margin:16px 0}
+.vctl .iconbtn{font-size:26px;padding:10px 16px}

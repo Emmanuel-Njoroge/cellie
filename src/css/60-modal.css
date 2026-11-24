@@ -1,0 +1,12 @@
+/* ===== Modal ===== */
+#modal{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.5);display:flex;align-items:flex-end;justify-content:center}
+#modal[hidden]{display:none}
+.sheet{width:100%;max-width:560px;background:var(--card);border-radius:24px 24px 0 0;padding:24px 22px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;max-height:90vh;overflow:auto}
+.sheet h2{font-size:24px;font-weight:900}
+.sheet p{color:var(--sub);font-size:16px}
+.sheet .row{width:100%}.sheet .row .btn{flex:1}
+.sheet.read{align-items:stretch;text-align:left}
+.tagc{display:inline-block;background:var(--uc,var(--accent));color:#fff;border-radius:99px;padding:3px 12px;font-size:13px;font-weight:800;align-self:center}
+@media (min-width:700px){#modal{align-items:center}.sheet{border-radius:24px}}
+.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}

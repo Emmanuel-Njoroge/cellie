@@ -1,0 +1,7 @@
+/* ================= MASCOT ================= */
+function mascot(mood='happy',size=96){
+  const mouth=mood==='sad'?'<path d="M48 95Q60 83 72 95" fill="none" stroke="#5a2020" stroke-width="5" stroke-linecap="round"/>':mood==='cheer'?'<path d="M44 82Q60 114 76 82Z" fill="#7a2d2d"/><path d="M52 96Q60 103 68 96Q60 90 52 96Z" fill="#ff7b8a"/>':'<path d="M48 84Q60 102 72 84Z" fill="#7a2d2d"/>';
+  const brows=mood==='sad'?'<path d="M30 46L52 52M90 46L68 52" stroke="#2f6b00" stroke-width="4" stroke-linecap="round"/>':'';
+  const spark=mood==='cheer'?'<text x="2" y="26" font-size="20">✨</text><text x="94" y="30" font-size="20">✨</text>':'';
+  return `<svg viewBox="0 0 120 120" width="${size}" height="${size}" aria-hidden="true"><ellipse cx="60" cy="114" rx="32" ry="5" fill="#000" opacity=".12"/><path d="M60 8C94 8 114 34 110 66C106 96 86 110 60 110C34 110 14 96 10 66C6 34 26 8 60 8Z" fill="var(--accent)" stroke="var(--accent-d)" stroke-width="4"/><circle cx="60" cy="30" r="12" fill="#8b5cf6"/><circle cx="56" cy="26" r="3.5" fill="#fff" opacity=".7"/><circle cx="42" cy="62" r="12" fill="#fff"/><circle cx="78" cy="62" r="12" fill="#fff"/><circle cx="44" cy="64" r="6" fill="#26343a"/><circle cx="80" cy="64" r="6" fill="#26343a"/><circle cx="46" cy="61" r="2" fill="#fff"/><circle cx="82" cy="61" r="2" fill="#fff"/><circle cx="28" cy="84" r="6" fill="#ff8fa3" opacity=".6"/><circle cx="92" cy="84" r="6" fill="#ff8fa3" opacity=".6"/>${brows}${mouth}${spark}</svg>`;
+}

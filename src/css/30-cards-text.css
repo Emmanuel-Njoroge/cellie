@@ -1,0 +1,9 @@
+/* ===== Cards, text ===== */
+.pt{font-size:26px;font-weight:900;margin:22px 0 4px}
+.sub{color:var(--sub);font-size:15px;margin-bottom:14px;line-height:1.4}
+.card{border:2px solid var(--line);border-radius:18px;padding:16px;background:var(--card);margin-bottom:14px}
+.card h3{font-size:18px;font-weight:900;margin-bottom:10px}
+.note{font-size:13px;color:var(--sub);line-height:1.5;margin-top:6px;font-weight:700}
+.banner{background:var(--accent-bg);border:2px solid var(--accent);border-radius:14px;padding:10px 14px;font-size:14px;margin:12px 0;line-height:1.4}
+.input{width:100%;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font:inherit;font-size:18px;font-weight:800;background:var(--card);color:var(--text)}
+.row{display:flex;gap:10px;flex-wrap:wrap}

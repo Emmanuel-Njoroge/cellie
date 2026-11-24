@@ -1,0 +1,10 @@
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const pad=n=>String(n).padStart(2,'0');
+const dkey=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const today=()=>dkey(new Date());
+const yday=()=>{const d=new Date();d.setDate(d.getDate()-1);return dkey(d)};
+const weekKey=()=>{const x=new Date();x.setDate(x.getDate()-((x.getDay()+6)%7));return dkey(x)};
+const daysLeftInWeek=()=>7-((new Date().getDay()+6)%7);

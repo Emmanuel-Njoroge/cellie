@@ -1,0 +1,15 @@
+/* ----- Me (profile, level, colors) ----- */
+function meHTML(){
+  if(meView==='grown')return grownHTML();
+  if(meView==='progress')return progressHTML();
+  const t=S.theme;
+  return `<h1 class="pt">Me</h1>
+  <div class="card" style="display:flex;align-items:center;gap:14px"><span class="avatar" style="width:60px;height:60px;font-size:34px">${S.avatar}</span><div style="flex:1;min-width:0"><b style="font-size:20px">${esc(S.nick)}</b><div class="sub" style="margin:0">${total()} points · ${LV[S.level].name}</div></div><button class="btn ghost sm" data-act="changeName">Change</button></div>
+  <div class="card" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><div style="flex:1;min-width:160px"><b style="font-size:18px">⏱ ${fmtDur(timeToday())} today</b><div class="sub" style="margin:0">${fmtDur(timeThisWeek())} this week · ${fmtDur(S.time.total)} in total</div></div><button class="btn sm" data-act="myProgress">My progress</button></div>
+  <div class="card"><h3>My level</h3><div style="display:flex;flex-direction:column;gap:10px">${LVK.map(k=>`<button class="opt ${S.level===k?'sel':''}" data-act="setLevel" data-v="${k}"><span class="big">${LV[k].icon}</span><span class="lvl"><b>${LV[k].name} · ${LV[k].grade}</b><small>${LV[k].ages}. ${(MULT[k])}x points.</small></span></button>`).join('')}</div></div>
+  <div class="card"><h3>My colors</h3><div class="swatches">${PALS.map(p=>`<button class="sw" style="--c:${p[1]};--ink:${lum(p[1])>.5?'#1f2a30':'#fff'}" aria-label="${p[0]}" aria-pressed="${!t.custom&&t.pal===p[0]}" data-act="setPal" data-v="${p[0]}"></button>`).join('')}<label class="sw" style="--c:${t.custom||'#cccccc'};display:grid;place-items:center;overflow:hidden" title="Pick any color"><input type="color" id="cc" value="${accentHex()}" aria-label="Pick any color" style="opacity:0;position:absolute;inset:0;width:100%;height:100%;cursor:pointer"><span aria-hidden="true">🎨</span></label></div>
+  <div class="setrow"><label>Screen</label><div class="seg" style="min-width:220px">${[['auto','Auto'],['light','Light'],['dark','Dark']].map(m=>`<button data-act="setMode" data-v="${m[0]}" aria-pressed="${t.mode===m[0]}">${m[1]}</button>`).join('')}</div></div>
+  <div class="setrow"><label>Path colors</label><div class="seg" style="min-width:220px"><button data-act="setMono" data-v="0" aria-pressed="${!t.mono}">By topic</button><button data-act="setMono" data-v="1" aria-pressed="${!!t.mono}">My color</button></div></div></div>
+  <div class="card"><h3>Sound</h3><div class="setrow" style="margin:0"><label>Effects</label><button class="btn ghost sm" data-act="sound">${S.sound?'On':'Off'}</button></div></div>
+  <div class="card"><h3>Account</h3><p class="sub" style="margin-bottom:10px">${acctText()}</p>${cloudNote?`<div class="banner">${esc(cloudNote)}</div>`:''}<div class="row"><button class="btn ghost sm" data-act="logout">Log out</button>${session==='class'?'<button class="btn ghost sm" data-act="leaveClass">Leave class</button>':''}<button class="btn ghost sm" data-act="gate">Grown-ups area</button></div></div>`;
+}

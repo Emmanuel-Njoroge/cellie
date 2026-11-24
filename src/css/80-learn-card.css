@@ -1,0 +1,16 @@
+/* ===== Learn card (definitions, comparisons, diagrams) ===== */
+.learn h2{font-size:26px;font-weight:900;margin-bottom:10px}
+.learn .def{font-size:19px;line-height:1.5;margin:14px 0;background:var(--accent-bg);border-radius:16px;padding:14px 16px}
+.learn .pts li{display:flex;gap:10px;margin:8px 0;font-size:16px;line-height:1.4}
+.learn .pts li::before{content:"✦";color:var(--accent-tx)}
+.vis{border:2px solid var(--line);border-radius:18px;padding:10px;background:var(--card);margin:6px 0}
+.tblwrap{overflow-x:auto;margin:14px 0}
+table.cmp{border-collapse:collapse;width:100%;font-size:14px;min-width:340px}
+table.cmp th,table.cmp td{border:2px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:var(--accent-bg);font-weight:900}
+table.cmp td:first-child{font-weight:900;background:var(--card)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch;margin:14px 0}
+.flow .st{flex:1 1 120px;border:2px solid var(--line);border-radius:14px;padding:10px;text-align:center;font-size:14px;background:var(--card)}
+.flow .st span{display:block;font-size:28px}
+.flow .ar{align-self:center;color:var(--sub);font-size:20px}
+@media (max-width:520px){.flow .ar{display:none}}

@@ -1,0 +1,21 @@
+/* ===== Classroom: join, teacher dashboard ===== */
+.join,.tdash{max-width:720px;margin:0 auto;padding:24px 18px 60px}
+.join{min-height:100vh;display:flex;flex-direction:column;justify-content:center;gap:14px;text-align:center;max-width:480px}
+.join h1,.tdash h1{font-size:28px;font-weight:900}
+.join .lcard{text-align:left}
+.lbl{font-size:14px;font-weight:900;color:var(--sub);margin:4px 0 -4px;display:block}
+.errbox{background:var(--bad-bg);color:var(--bad-tx);border-radius:12px;padding:10px 14px;font-size:14px;line-height:1.4;text-align:left}
+.bigcode{font-size:42px;font-weight:900;letter-spacing:6px;text-align:center;background:var(--accent-bg);border-radius:18px;padding:14px;color:var(--accent-tx)}
+.keybox{font-size:26px;font-weight:900;letter-spacing:3px;text-align:center;background:var(--gold);color:#4a3200;border-radius:14px;padding:12px}
+.tcols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.tcols{grid-template-columns:1fr}}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.tbl th,.tbl td{padding:9px 8px;text-align:left;border-bottom:2px solid var(--line);vertical-align:middle}
+.tbl th{font-size:12px;color:var(--sub);text-transform:uppercase;letter-spacing:.5px}
+.tbl tr.trow{cursor:pointer}.tbl tr.trow:hover{background:var(--accent-bg)}
+.mini{height:10px;background:var(--line);border-radius:99px;overflow:hidden;min-width:70px}
+.mini i{display:block;height:100%;background:var(--accent);border-radius:99px}
+.flag{display:inline-block;font-size:12px;font-weight:900;border-radius:99px;padding:2px 10px;color:#fff}
+.flag.help{background:var(--bad)}.flag.live{background:#26890c}.flag.new{background:#8b5cf6}
+.activechips{display:flex;gap:8px;flex-wrap:wrap}
+.activechips span{background:var(--ok-bg);color:var(--ok-tx);border-radius:99px;padding:4px 12px;font-size:13px;font-weight:800}
