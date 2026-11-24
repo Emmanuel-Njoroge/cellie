@@ -19,7 +19,7 @@ const unlocked=(arr,gi)=>gi===0||isDone(arr[gi-1].l);
 const goalPts=()=>30*mult();
 
 const BADGES=[
- ...UNITS.map(u=>({id:'u-'+u.id,icon:u.sticker,name:u.stickerName,hint:'Finish both '+u.title+' lessons at any level',test:()=>LVK.some(k=>lessonsFor(u,k).every(isDone))})),
+ ...UNITS.map(u=>({id:'u-'+u.id,icon:u.sticker,name:u.stickerName,hint:'Finish all 3 '+u.title+' lessons (including the challenge) at any level',test:()=>LVK.some(k=>lessonsFor(u,k).every(isDone))})),
  {id:'first',icon:'🚀',name:'Lift-off',hint:'Finish your first lesson',test:()=>Object.keys(S.done).length>=1},
  {id:'perfect',icon:'🎯',name:'Bullseye',hint:'Get every answer right in a lesson',test:()=>Object.values(S.done).some(d=>d.best>=1)},
  {id:'streak3',icon:'🔥',name:'On Fire',hint:'Learn 3 days in a row',test:()=>S.bestStreak>=3},

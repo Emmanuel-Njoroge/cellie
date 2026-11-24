@@ -93,7 +93,7 @@ function teacherClassHTML(err){
     body=`<div class="card"><h3>Minutes per day (last 14 days)</h3>${barsSVG(rows)}</div>
     <div class="card"><h3>By day</h3>${table?`<div class="tblwrap"><table class="tbl" style="min-width:420px"><thead><tr><th>Day</th><th>Active students</th><th>Time</th><th>Lessons</th><th>Answers</th><th>Accuracy</th></tr></thead><tbody>${table}</tbody></table></div>`:'<p class="sub" style="margin:0">No activity recorded yet.</p>'}</div>
     <div class="card"><h3>Most time this week</h3>${top.map(s=>`<div class="rev"><span>${esc(s.avatar||'')} ${esc(s.nick)}</span><b>${fmtDur(s.wsecs)}</b></div>`).join('')||'<p class="sub" style="margin:0">No time recorded this week.</p>'}</div>
-    <p class="note">Time only counts while a student has the app open and is using it (or watching a video). It pauses after 90 seconds without activity.</p>`;
+    <p class="note">Time only counts while a student is learning (the Learn path, lessons, chapters and videos) and active. It pauses after 90 seconds without activity.</p>`;
   }else if(TS.tab==='insights'){
     const lv=LVK.map(k=>`<span class="pill">${LV[k].icon} ${LV[k].name}: <b>${st.filter(s=>s.level===k).length}</b></span>`).join(' ');
     body=`<div class="card"><h3>Class accuracy by topic</h3><p class="sub">First-try answers from every student.</p>${topicBars(d.topics)}</div>

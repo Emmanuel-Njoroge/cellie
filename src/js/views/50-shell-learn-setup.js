@@ -33,7 +33,7 @@ function learnHTML(){
       if(it.ui!==ui)return;
       const off=OFF[n++%OFF.length],isCur=gi===cur;
       const icon=it.done?(it.kind==='sticker'?u.sticker:(it.kind==='lesson'||it.kind==='challenge')?'⭐':'✅'):it.open?it.icon:(it.kind==='sticker'?'🎁':'🔒');
-      h+=`<div class="nodewrap" style="transform:translateX(${off}px)">${isCur?'<div class="start">START</div>':''}<button class="node k-${it.kind} ${it.done?'done':''} ${it.open?'':'locked'} ${isCur?'cur':''}" data-act="node" data-i="${gi}" aria-label="${esc(it.title)}${it.done?', completed':it.open?'':', locked'}"><span>${icon}</span></button><div class="nlabel">${esc(it.title)}</div></div>`;
+      h+=`<div class="nodewrap" style="--o:${off}">${isCur?'<div class="start">START</div>':''}<button class="node k-${it.kind} ${it.done?'done':''} ${it.open?'':'locked'} ${isCur?'cur':''}" data-act="node" data-i="${gi}" aria-label="${esc(it.title)}${it.done?', completed':it.open?'':', locked'}"><span>${icon}</span></button><div class="nlabel">${esc(it.title)}</div></div>`;
     });
     h+='</div></section>';
   });

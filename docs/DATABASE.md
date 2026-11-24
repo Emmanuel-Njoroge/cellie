@@ -40,8 +40,10 @@ never edit one that has already been applied.
 | `daily_activity` | student × day | Active seconds, points, lessons completed, steps completed, answers, correct answers |
 | `live_status` | student | What they are doing right now (powers the Live board) |
 
-**How minutes are counted:** the app counts a second only while the page is visible and the
-student has clicked, typed, scrolled or touched in the last 90 seconds (or a video is playing).
+**How minutes are counted:** the app counts a second only while the student is learning (on the
+Learn path, in a lesson, a chapter or a video), the page is visible, and they have clicked, typed,
+scrolled or touched in the last 90 seconds (or a video is playing). Time on the Me, Ranks,
+Stickers, Live and grown-ups screens does not count.
 About every 20 seconds it sends "active for N seconds". The server accepts at most 40 seconds per
 ping and never more than the real time since the previous ping, so time cannot be inflated.
 

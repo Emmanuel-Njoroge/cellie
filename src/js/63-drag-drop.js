@@ -10,8 +10,11 @@ function dropTo(id,zone){
 }
 function ddTap(id,from){
   const c=L&&L.cur;if(!c||c.done)return;
-  if(from==='tray'){c.held=c.held===id?null:id;renderLesson()}
-  else dropTo(id,'tray');
+  if(from==='tray'){c.held=c.held===id?null:id;renderLesson();return}
+  // A card is held and the child tapped a card already in a box or blank: put the held card there.
+  // (For a blank, the word that was there goes back to the tray.)
+  if(c.held!==null&&c.held!==undefined&&c.held!==id){dropTo(c.held,from==='blank'?'0':from);return}
+  dropTo(id,'tray');
 }
 document.addEventListener('pointerdown',e=>{
   const el=e.target.closest&&e.target.closest('.dd');

@@ -91,7 +91,7 @@ PIN. On another device choose "I've played before". **Me > My progress** shows t
 
 - Students never type a real name. Names are generated ("Brave Otter 21").
 - PINs and teacher keys are stored hashed. Eight wrong PINs lock a student for 10 minutes.
-- Time is only counted while the app is open and in use (or a video is playing).
+- Time is only counted while a student is learning (Learn path, lessons, chapters, videos) and active.
 - A teacher's "Remove" hides the student and signs them out but keeps their records.
   A student's own "Leave class" deletes all of their data.
 - Follow your school's rules about student data. See `docs/DATABASE.md` for exactly what is stored.

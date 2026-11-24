@@ -21,3 +21,10 @@
 .start{position:absolute;top:-30px;background:var(--card);color:var(--uc);border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;padding:3px 12px;font-weight:900;font-size:14px;letter-spacing:.8px;animation:bob 1.4s ease-in-out infinite}
 .start::after{content:"";position:absolute;left:50%;bottom:-9px;width:12px;height:12px;background:var(--card);border-right:2px solid var(--line);border-bottom:2px solid var(--line);transform:translateX(-50%) rotate(45deg)}
 @keyframes bob{50%{transform:translateY(-6px)}}
+.nodewrap{transform:translateX(calc(var(--o,0) * 1px))}
+.main{overflow-x:clip}
+@media (max-width:360px){
+  .nodewrap{transform:translateX(calc(var(--o,0) * .55px))}
+  .topbar{flex-wrap:wrap;row-gap:8px}
+  .topbar .goal{order:3;flex-basis:100%}
+}

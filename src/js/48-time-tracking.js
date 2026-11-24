@@ -6,7 +6,8 @@ const SESSION_ID=Math.random().toString(36).slice(2,10)+Date.now().toString(36).
 const PING_SEC=window.__PING_SEC||20,IDLE_MS=90000;
 let lastInput=Date.now(),pendingSec=0,pingBusy=false;
 ['pointerdown','keydown','touchstart','wheel','scroll'].forEach(ev=>addEventListener(ev,()=>{lastInput=Date.now()},{passive:true,capture:true}));
-const isLearningScreen=()=>(!!S.nick&&screen==='home')||!!L||!!RD||!!VD;
+// Learning = the Learn path, a lesson, a chapter or a video. Grown-ups, Me, Ranks, Stickers and Live do not count.
+const isLearningScreen=()=>!!L||!!RD||!!VD||(!!S.nick&&screen==='home'&&tab==='learn');
 function isActive(){
   if(document.hidden)return false;
   if(VD&&VD.playing)return true;
